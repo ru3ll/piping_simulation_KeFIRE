@@ -97,7 +97,8 @@ function startSimulation() {
         index = Math.floor(fcv/100 * 20)
         m_dot = Cv[index] * Math.sqrt((P_accumulator-P_fcv)/0.789)
         var volume = density / (m_dot * delta_t)
-        P_tank = P_tank - (((volume / Nitrogen_density)/ delta_t)*R*T)/(V*M)
+        P_tank = P_tank - ((((volume / Nitrogen_density)/ delta_t)*R*T)/(V*M))/101350
+        
         chart.data.datasets[0].data.push(P_tank);
         chart.data.datasets[1].data.push(P_reducer);
         chart.data.datasets[2].data.push(P_fcv);
