@@ -1,0 +1,268 @@
+.body {
+    background-color: #212121;
+    height: 99%;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 30vh 60vh;
+    row-gap: 20px;
+    margin-top: 5vh;
+    width: 95vw;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.inputs {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.regulator {
+    background-color: #313131;
+    height: 100%;
+    width: 100%;
+    
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: cyan;
+    
+}
+.fcv {
+    background-color: #313131;
+    height: 100%;
+    width: 100%;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: cyan;
+    
+}
+.inputs {
+    background-color: #313131;
+    height: 100%;
+    width: 100%;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: cyan;border-radius: 12px;
+    display: grid;
+    grid-row: auto auto;
+    
+}
+
+.simulate {
+    margin: 12px;
+    display: grid;
+    grid-template-columns: 40% 10%;
+    align-items: center;
+    width: 50%;
+}
+
+.simulate_text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: White;
+    margin-left: 12px;
+    
+}
+
+.container {
+    --color: white;
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+  }
+  
+  .container .play {
+    position: absolute;
+    animation: keyframes-fill 0.3s;
+  }
+  
+  .container .pause {
+    position: absolute;
+    display: none;
+    animation: keyframes-fill 0.3s;
+  }
+  
+  /* ------ On check event ------ */
+  .container input:checked ~ .play {
+    display: none;
+  }
+  
+  .container input:checked ~ .pause {
+    display: block;
+  }
+  
+  /* ------ Hide the default checkbox ------ */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* ------ Animation ------ */
+  @keyframes keyframes-fill {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+
+/* Sliders */
+  
+  .thermostat {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 100px;
+    background: #F2F2F2;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.8);
+  }
+  
+  .thermostat .control {
+    position: absolute;
+    z-index: 5;
+    width: 130px;
+    height: 130px;
+    top: 25%;
+    left: 35px;
+    background: #E6E6E6;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+  }
+  .thermostat .control .temp_outside {
+    position: absolute;
+    top: 25px;
+    left: 6px;
+    right: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .thermostat .control .temp_room {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: #873183;
+    letter-spacing: -8px;
+    padding-right: 12px;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .5s ease-in-out;
+  }
+  .thermostat .control .temp_room span {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 2rem;
+    line-height: 34px;
+    padding: 3px 0 0 7px;
+      color: #8e2275;
+  }
+  .room {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .thermostat .ring {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 10px;
+    left: 10px;
+    background: url("http://100dayscss.com/codepen/thermostat-gradient.jpg") center center no-repeat;
+    border-radius: 50%;
+    box-shadow: inset 2px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  }
+  .thermostat .ring .bottom_overlay {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: 50%;
+    left: 50%;
+    background: #F2F2F2;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+    border-radius: 0 0 95px 0;
+  }
+  
+  #pressure {
+      position: absolute;
+      width: 170px;
+      height: 150px;
+      top: 15.5%;
+      left: 6.7%;
+      z-index: 1000;
+  }
+  
+  #pressure .rs-border  {
+      border-color: transparent;
+  }
+  .rs-control .rs-range-color, .rs-control .rs-path-color, .rs-control .rs-bg-color {
+      background-color: rgba(0, 0, 0, 0);
+  }
+  .rs-control .rs-handle {
+      background-color: fade-out(#522c6d, .2);
+  }
+  .rs-tooltip.edit, .rs-tooltip .rs-input, .rs-tooltip-text {
+      font-family: rubik, helvetica, sans-serif;
+      font-size: 3.3rem;
+      background: transparent;
+      color: #8e2275;
+      font-weight: 400;
+      top: 65%;
+      height: 3.9rem;
+      padding: 0 !important;
+      width: 4.5rem;
+  }
+  #pressure:hover .rs-tooltip, .rs-tooltip:focus, .rs-tooltip-text:focus {
+      border: none;
+      transform: scale(1.1);
+      transition: .1s;
+  }
+  #pressure .rs-transition  {
+    transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+  }
+  .fas {
+      animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+      50% {
+          transform: scale(.9);
+      }
+  }

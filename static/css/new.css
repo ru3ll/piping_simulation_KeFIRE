@@ -1,0 +1,150 @@
+.thermostat_2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 700px;
+    background: #F2F2F2;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.8);
+  }
+  
+  .thermostat_2 .control_2 {
+    position: absolute;
+    z-index: 5;
+    width: 130px;
+    height: 130px;
+    top: 25%;
+    left: 35px;
+    background: #E6E6E6;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+  }
+  .thermostat_2 .control_2 .temp_outside {
+    position: absolute;
+    top: 25px;
+    left: 6px;
+    right: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .thermostat_2 .control_2 .temp_room_2 {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: #873183;
+    letter-spacing: -8px;
+    padding-right: 12px;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .5s ease-in-out;
+  }
+  .thermostat_2 .control_2 .temp_room_2 span {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 2rem;
+    line-height: 34px;
+    padding: 3px 0 0 7px;
+      color: #8e2275;
+  }
+  .room_2 {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .thermostat_2 .ring_2 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 10px;
+    left: 10px;
+    background: url("http://100dayscss.com/codepen/thermostat-gradient.jpg") center center no-repeat;
+    border-radius: 50%;
+    box-shadow: inset 2px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  }
+  .thermostat_2 .ring_2 .bottom_overlay_2 {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: 50%;
+    left: 50%;
+    background: #F2F2F2;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+    border-radius: 0 0 95px 0;
+  }
+  
+  #fcv {
+      position: absolute;
+      width: 170px;
+      height: 150px;
+      top: 15.5%;
+      left: 38%;
+      z-index: 1000;
+  }
+  
+  #fcv .rs-border  {
+      border-color: transparent;
+  }
+  .rs-control .rs-range-color, .rs-control .rs-path-color, .rs-control .rs-bg-color {
+      background-color: rgba(0, 0, 0, 0);
+  }
+  .rs-control .rs-handle {
+      background-color: fade-out(#522c6d, .2);
+  }
+  .rs-tooltip.edit, .rs-tooltip .rs-input, .rs-tooltip-text {
+      font-family: rubik, helvetica, sans-serif;
+      font-size: 3.3rem;
+      background: transparent;
+      color: #8e2275;
+      font-weight: 400;
+      top: 65%;
+      height: 3.9rem;
+      padding: 0 !important;
+      width: 4.5rem;
+  }
+  #fcv:hover .rs-tooltip, .rs-tooltip:focus, .rs-tooltip-text:focus {
+      border: none;
+      transform: scale(1.1);
+      transition: .1s;
+  }
+  #fcv .rs-transition  {
+    transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+  }
+  .fas {
+      animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+      50% {
+          transform: scale(.9);
+      }
+  }
+
+  .chart {
+    background-color: #212121;
+    color: #873183;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    
+}
+
+  #myChart {
+    margin-top: 2%;
+    margin-left: 2%;
+    max-width: 55%;
+    max-height: 90%;
+    border-radius: 12px;
+    background-color: white;
+  }
