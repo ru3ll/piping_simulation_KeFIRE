@@ -114,7 +114,7 @@ function startSimulation() {
         m_dot_ethanol = density * Q_eth
 
         // compute the pressure in the accumulator due to the expansion
-        P_acc = P_acc * V_acc / (V_acc + V_eth)
+        P_acc = P_acc * 0.9999 // V_acc / (V_acc + V_eth)
         
 
         // compute the new volume of nitrogen in the accumulator
@@ -126,7 +126,7 @@ function startSimulation() {
 
         // start ny calculating the mass flow rate
 
-        if (Math.pow((P_acc/P_reducer), gamma) < 1){
+        if (Math.pow((P_acc/P_reducer), gamma) < 1){ // prervent backflow
             var m_dot_N2 = Cd*A * Math.sqrt( (density_at_35_bar * 2 * (P_reducer - P_acc))/(1-Math.pow((P_acc/P_reducer), gamma)))
         }else{
             var m_dot_N2 = 0
@@ -134,7 +134,7 @@ function startSimulation() {
         var m = m_dot_N2 * delta_t
 
         // update P_accumulator due to the air that nitrogen that just entered
-        P_acc = P_acc * (m_acc + m) / m_acc
+        // P_acc = P_acc * (m_acc + m) / m_acc
 
         m_acc = m_acc + m
 
